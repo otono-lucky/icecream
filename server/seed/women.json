@@ -1,0 +1,38 @@
+[
+  {
+    "key": "chioma", "firstName": "Chioma", "dateOfBirth": "1979-04-12", "city": "Lagos", "idBadge": true,
+    "profile": {
+      "marital_status": "divorced", "has_children": 1, "children_count": 2, "children_live_with": "all", "open_to_partner_children": "yes",
+      "faith": "christian", "faith_practice": "practising", "partner_faith_importance": "prefer_match", "relocate": "maybe",
+      "occupation": "Pharmacist", "typical_week": "Weekdays at my pharmacy in Surulere, Saturdays at the market with my girls, Sundays at church.",
+      "looking_for": "marriage", "own_words": "A kind, steady man who knows what he wants and is ready to build a calm home."
+    }
+  },
+  {
+    "key": "amaka", "firstName": "Amaka", "dateOfBirth": "1985-02-03", "city": "Enugu", "idBadge": false,
+    "profile": {
+      "marital_status": "never_married", "has_children": 0, "children_count": null, "children_live_with": null, "open_to_partner_children": "yes",
+      "faith": "christian", "faith_practice": "devout", "partner_faith_importance": "must_match", "relocate": "yes",
+      "occupation": "Bank manager", "typical_week": "Long days at the bank, choir practice on Thursdays, and Saturday hikes when I can.",
+      "looking_for": "marriage", "own_words": "God-fearing, honest and patient. I'd love to start a family with the right person."
+    }
+  },
+  {
+    "key": "funmilayo", "firstName": "Funmilayo", "dateOfBirth": "1974-09-21", "city": "Ibadan", "idBadge": true,
+    "profile": {
+      "marital_status": "widowed", "has_children": 1, "children_count": 3, "children_live_with": "none", "open_to_partner_children": "yes",
+      "faith": "christian", "faith_practice": "practising", "partner_faith_importance": "prefer_match", "relocate": "no",
+      "occupation": "Runs a fashion business", "typical_week": "My shop keeps me busy, but evenings are for reading and Sunday lunch with family.",
+      "looking_for": "companionship", "own_words": "My children are grown. I'm looking for good company, laughter and someone to share quiet evenings with."
+    }
+  },
+  {
+    "key": "ngozi", "firstName": "Ngozi", "dateOfBirth": "1970-11-30", "city": "Port Harcourt", "idBadge": false,
+    "profile": {
+      "marital_status": "separated", "has_children": 1, "children_count": 1, "children_live_with": "some", "open_to_partner_children": "maybe",
+      "faith": "christian", "faith_practice": "occasional", "partner_faith_importance": "doesnt_matter", "relocate": "maybe",
+      "occupation": "Retired civil servant", "typical_week": "Gardening, volunteering at the community centre, and travelling to see my son.",
+      "looking_for": "committed", "own_words": "Life is for living. I want an honest partner to enjoy this next chapter with."
+    }
+  }
+]

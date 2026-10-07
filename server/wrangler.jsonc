@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "icecream-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-20",
+  // Needed by worker-mailer (SMTP over Cloudflare TCP sockets).
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  // Listen on the local network during `wrangler dev`, so the app on a phone can reach it.
+  "dev": { "ip": "0.0.0.0", "port": 8787 },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "icecream-db",
+      // Replace with the id from `wrangler d1 create icecream-db` before deploying.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "icecream-media" }],
+  // Every minute: send the next few queued bulk emails (features/admin/emails.ts).
+  "triggers": { "crons": ["* * * * *"] },
+  // Production-safe defaults. Local development overrides these in .dev.vars.
+  "vars": {
+    "ENVIRONMENT": "production",
+    "EMAIL_PROVIDER": "smtp",
+    // "fake" serves a test checkout page (never in production); "paystack" comes next.
+    "BILLING_PROVIDER": "paystack",
+    // SMTP settings for sign-in emails. SMTP_USER and SMTP_PASSWORD are secrets:
+    // set them with `npx wrangler secret put SMTP_USER` / `SMTP_PASSWORD`, never here.
+    "SMTP_HOST": "smtp.gmail.com",
+    "SMTP_PORT": "465",
+    // Bulk emails per 24 hours. Gmail allows about 500 a day in total; this leaves room for sign-in codes.
+    "EMAIL_DAILY_LIMIT": "400",
+    "EMAIL_FROM_NAME": "icecream",
+    "EMAIL_FROM_ADDRESS": "",
+    "CORS_ORIGINS": ""
+  }
+}
